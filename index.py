@@ -42,8 +42,8 @@ def get_model(path):
     return model
 
 global  model1, model2
-model1 = get_model("C:/Users/User  A/Desktop/Histophatologic cancer detection/models/model0.h5")
-model2 = get_model("C:/Users/User  A/Desktop/Histophatologic cancer detection/models/model1.h5")
+model1 = get_model("../models/model0.h5")
+model2 = get_model("../models/model1.h5")
 
 def model_predict( model):
     img = image.load_img('./asd.png', target_size=(96,96)) 
@@ -72,7 +72,7 @@ def parse_contents(contents, filename, date):
         html.Br(),
         html.Br(),
         html.Center(html.P('Pabló Gómez és csapata osztályozójának jósolt értéke: {}'.format(
-       1 - pred1[0][0]),style={'font-family' : 'Times New Roman', 'font-size' : '1.5em'})),
+       pred1[0][0]),style={'font-family' : 'Times New Roman', 'font-size' : '1.5em'})),
        html.Br(),
        html.Center(html.P('Marsh modellje által jósolt érték {}'.format(
        pred2[0][1]),style={'font-family' : 'Times New Roman', 'font-size' : '1.5em'})),
